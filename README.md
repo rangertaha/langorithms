@@ -1,48 +1,35 @@
 # langorithms
 
-Data structures and algorithms in various languages
+Data structures and algorithms in various languages.  This project contains code snippets, nodes, data structures and algorithms implemented in 
+the following languages as a way to help me learn these languages.  
 
 
-# Lua
+## Lua
 
-## Basics
+- [ ] Basics
+- [ ] Advanced
+- [ ] Libraries
 
-- [x] Examine code
-- [ ] Commit fixes
-- [ ] Request a review
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+## C
 
-## Advanced
-- [ ] Debugging
-- [ ] Garbage Collection
-- [ ] Object Oriented
-- [ ] Web Programing
-- [ ] Database Access
-- [ ] Game Pgramming
+- [ ] Basics
+- [ ] Advanced
+- [ ] Libraries
 
-## Library 
-- [ ] Standard Library
-- [ ] Math Library
-- [ ] Operating System Facilities
+## Rust
 
-## Resources
+- [ ] Basics
+- [ ] Advanced
+- [ ] Libraries
+
+## Golang
+
+- [ ] Basics
+- [ ] Advanced
+- [ ] Libraries
+
+## Python
+
+- [ ] Basics
+- [ ] Advanced
+- [ ] Libraries
