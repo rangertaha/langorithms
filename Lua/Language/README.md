@@ -6,13 +6,25 @@
 
 * Writen in C
 
+## Features
 
 ## Overview
-### Features
-### Implementation
+## Implementation
+
+Writen in C... 
+Has an interactive interpreter...
 
 
 ## Environment 
+
+Installed on Mac with the following.
+```bash
+brew install lua
+```
+
+
+
+
 
 ## Syntax
 

@@ -1,10 +1,10 @@
-# Lua Checklist
+# Learning Checklist
 
 ## Basics
 
-- [x] Examine code
-- [ ] Commit fixes
-- [ ] Request a review
+- [ ] ...
+- [ ] ...
+- [ ] ...
 - [ ] 
 - [ ] 
 - [ ] 
@@ -41,3 +41,4 @@
 - [ ] Operating System Facilities
 
 ## Resources
+
