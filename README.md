@@ -13,7 +13,7 @@ to help me track what I have learned and help me move forward.
 - [ ] Tools
 - [ ] Syntax
 - [ ] Variables
-- [ ] Data Structures
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
@@ -25,7 +25,7 @@ to help me track what I have learned and help me move forward.
 - [ ] Tools
 - [ ] Syntax
 - [ ] Variables
-- [ ] Data Structures
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
@@ -37,7 +37,7 @@ to help me track what I have learned and help me move forward.
 - [ ] Tools
 - [ ] Syntax
 - [ ] Variables
-- [ ] Data Structures
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
@@ -49,7 +49,7 @@ to help me track what I have learned and help me move forward.
 - [ ] Tools
 - [ ] Syntax
 - [ ] Variables
-- [ ] Data Structures
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
@@ -61,7 +61,7 @@ to help me track what I have learned and help me move forward.
 - [ ] Tools
 - [ ] Syntax
 - [ ] Variables
-- [ ] Data Structures
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries

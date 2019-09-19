@@ -4,7 +4,7 @@
 ## Tools
 ## Syntax
 ## Variables
-## Data Structures
+## Data Types
 ## Control Structures
 ## Object Oriented Patterns
 ## Standard Libraries
