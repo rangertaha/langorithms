@@ -1,18 +1,28 @@
 # Language Template
 
-- [ ] Tools
-    - [ ] ...
-    - [ ] ...
-    - [ ] ...
-    - [ ] ...
-- [ ] Syntax
-- [ ] Variables
-- [ ] Data Structures
-- [ ] Control Structures
-- [ ] Object Oriented Patterns
-- [ ] Standard Libraries
-- [ ] Algorithms
-- [ ] Design Patterns 
+
+0. Language
+    - [ ] Tools
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    - [ ] Syntax
+    - [ ] Variables
+    - [ ] Data Types
+    - [ ] Operators
+    - [ ] Control Structures
+    - [ ] Object Oriented Programming
+
+1. Data Structures
+
+2. Algorithms
+
+3. Libraries
+    - [ ] Standard Libraries
+    - [ ] Third Party Libraries
+    
+4. Patterns 
 
 
 
