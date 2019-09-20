@@ -1,6 +1,16 @@
 # Lua
 
 
+
+
+Lua is built in C, opensource and fast. 
+* Dynamically Typed
+
+* Case Sensitive
+
+* Writen in C
+
+
 * Tools
 * Syntax
 * Variables
@@ -16,26 +26,23 @@
 
 
 
+## Tools
 
-
-
-* Dynamically Typed
-
-* Case Sensitive
-
-* Writen in C
 
 * Visual Studio Code
     * Lua and Ravi 5.3 Debugger
+ 
+## Environment 
+
+Installed on Mac with the following.
+```bash
+brew install lua
+```
+
+
+   
     
-    
-## Features
-
-
-
-
-
-
+## Syntax
 
 
 
@@ -56,14 +63,6 @@
 
 Writen in C... 
 Has an interactive interpreter...
-
-
-## Environment 
-
-Installed on Mac with the following.
-```bash
-brew install lua
-```
 
 
 
@@ -220,7 +219,15 @@ Operators tell the interpreter to perform a specific mathematical or logical man
 | -               | Unary            |
 
 
+### Examples
+
+
+
 ```bash
+> a,b,c,d = 1,2,3,4
+> 
+> a+b
+3
 
 ```
 
@@ -243,46 +250,95 @@ Operators tell the interpreter to perform a specific mathematical or logical man
 ```bash
 
 ```
+
 
 ## Relational Operators
 
-| Operator        | Description      | Example      |
-|                 |                  |              |
-| --------------: | ---------------: | -----------: |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
+| Operator        | Description               |
+|                 |                           |
+| --------------: | ---------------:          |
+| ==              | Equals                    |
+| ~=              | Not Equals                |
+| >               | Greater than              |
+| <               | Less than                 |
+| >=              | Greater than or equals to |
+| <=              | Less than or equals to    |
+|                 |                           |
+
+### Examples
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+
 
 
 ## Logical Operators
-| Operator        | Description      | Example      |
-|                 |                  |              |
-| --------------: | ---------------: | -----------: |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
+| Operator        | Description      |
+|                 |                  |            
+| --------------: | ---------------: |
+| and             | Logical AND      |              
+| or              | Logical OR       |              
+| not             | Logical NOT      |              
+
+
+### Examples
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
 
 
 
 ## Misc Operators
-| Operator        | Description      | Example      |
-|                 |                  |              |
-| --------------: | ---------------: | -----------: |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
-|                 |                  |              |
+| Operator        | Description                              |
+|                 |                                          |
+| --------------: | ---------------------------------------: |
+| ..              | Concatenates two strings                 |
+| #               | Returns the length of a string or table  |
+       
 
 
 ### Operator Precedence
@@ -386,5 +442,56 @@ print(type(10))
 print(type(nil))
 print(type(print))
 ```
+
+
+
+
+
+
+# Control Structures
+
+## While Loop
+
+Continuously executes a statement if the condition is true
+```text
+while(<condition>)
+
+do
+    <statement>
+end
+
+```
+
+
+### Examples
+
+
+
+#### Infinite Loop
+```bash
+while ( true )
+do 
+    print("This loops forever")
+end
+```
+
+
+
+
+
+## For Loop
+
+## Repeat Until Loop
+## Nested Loops
+
+
+
+
+
+
+
+
+
+
 
 
