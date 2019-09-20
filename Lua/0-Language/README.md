@@ -469,10 +469,21 @@ end
 
 #### Infinite Loop
 ```bash
-while ( true )
-do 
-    print("This loops forever")
-end
+> while ( true )
+>> do 
+>>     print("This loops forever")
+>> end
+```
+
+
+```bash
+> a = 10 
+> while (a < 20)
+>> do
+>> 
+>> print("value of a is:", a)
+>> a = a +1 
+>> end 
 ```
 
 
@@ -480,6 +491,14 @@ end
 
 
 ## For Loop
+
+
+
+
+```bash
+
+
+```
 
 ## Repeat Until Loop
 ## Nested Loops
