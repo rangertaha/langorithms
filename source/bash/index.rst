@@ -1,7 +1,7 @@
 .. Bash Programming
 
-Bash Programming
-==================
+Bash Scripting
+==============
 
 .. toctree::
    :maxdepth: 2

@@ -1,7 +1,7 @@
-.. Rust Programming
+.. Golang Programming
 
-Rust Programming
-================
+Golang Programming
+==================
 
 .. toctree::
    :maxdepth: 2

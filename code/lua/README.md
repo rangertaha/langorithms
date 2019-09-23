@@ -221,38 +221,67 @@ Operators tell the interpreter to perform a specific mathematical or logical man
 
 ### Examples
 
-
-
+Adding operands
 ```bash
 > a,b,c,d = 1,2,3,4
 > 
-> a+b
+> a + b
 3
-
 ```
 
+Subtracting operands
 ```bash
-
+> a=1,
+> b=4
+> b-a
+3
 ```
 
+Multiply operands
 ```bash
-
+> a,b = 2,6
+> 
+> a*b
+12
 ```
 
+Divide numerator by denominator
 ```bash
-
+> a,b = 2,6
+> a/b
+0.33333333333333
+> b/a
+3.0
 ```
 
+The remainder after division
 ```bash
-
+> a,b = 2,6
+> a%b
+2
 ```
 
+The exponent of an operand
 ```bash
+> a,b = 2,6
+> a^2
+4.0
+> b^2
+36.0
+```
 
+
+Negative values
+```bash
+> a = 2
+> b = -a
+> b
 ```
 
 
 ## Relational Operators
+
+Checks operand conditions and return true or false
 
 | Operator        | Description               |
 |                 |                           |
@@ -267,28 +296,65 @@ Operators tell the interpreter to perform a specific mathematical or logical man
 
 ### Examples
 
-```bash
+Operand equality check
 
+```bash
+> a,b = 2,6
+> a == b
+false
+> c,d = "one","two"
+> c ==d
+false
+> c == "one"
+true
 ```
 
+Not equal condition check
 ```bash
-
+> c,d = "one","two"
+> c ~= d
+true
 ```
 
+Is the first operand greater than second 
 ```bash
-
+> a,b = 2,6
+> a>b
+false
+> b>a
+true
 ```
 
+Is the first operand less than the second
 ```bash
-
+> a,b = 2,6
+> b<a
+false
+> a<b
+true
 ```
 
+Is the first operand greater than or equal to the second
 ```bash
-
+> a,b = 2,6
+> a>=b
+false
+> a>=2
+true
+> a>=1
+true
 ```
 
-```bash
+Is the first operand less than or equal to the second
 
+```bash
+> a,b = 2,6
+> a<=b
+true
+> a<=2
+true
+> a<=1
+false
 ```
 
 

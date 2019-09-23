@@ -3,8 +3,8 @@ Langorithms
 
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Contents:
 
   template/index
   javascript/index

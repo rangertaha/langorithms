@@ -10,10 +10,10 @@ to help me track what I have learned and help me move forward.
 
 ## Lua
 
-- [ ] Tools
-- [ ] Syntax
-- [ ] Variables
-- [ ] Data Types
+- [x] Tools
+- [x] Syntax
+- [x] Variables
+- [x] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
