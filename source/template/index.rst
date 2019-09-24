@@ -1,3 +1,4 @@
+====================
 Programming Template
 ====================
 
@@ -11,3 +12,37 @@ Programming Template
   ./libraries
   ./patterns
 
+
+
+
+
+-------------
+Section Title
+-------------
+
+Section Title
+=============
+
+Section Title
+-------------
+
+Section Title
+`````````````
+
+Section Title
+'''''''''''''
+
+Section Title
+.............
+
+Section Title
+~~~~~~~~~~~~~
+
+Section Title
+*************
+
+Section Title
++++++++++++++
+
+Section Title
+^^^^^^^^^^^^^
