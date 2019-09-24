@@ -4,7 +4,10 @@ Language
 
 Lua is an embedded lightweight language written in C.
 
+Lua is a dynamically typed programming language
 
+Written in C...
+Has an interactive interpreter...
 
 -----
 Setup
@@ -23,14 +26,42 @@ Syntax
 -------
 
 
-Written in C...
-Has an interactive interpreter...
 
 
 
-## Comments
 
-Inline comments
+Comments
+========
+
+Inline comments start with a **--** for the entire line. Block comments start with **--[[** and end with **]]**.
+However, the convention is to end with **--]]** so we can uncomment the entire block by adding a hyphen to the start of
+the block comment.
+
+.. code:: bash
+
+  --[[ This is a block comment
+  a = 1
+  while(a < 10) do
+    print(a)
+    a = a + 1
+  end
+  --]]
+
+To uncomment this **chunk** of code we add a hyphen.
+
+.. code:: bash
+
+  ---[[ This is a block comment
+  a = 1
+  while(a < 10) do
+    print(a)
+    a = a + 1
+  end
+  --]]
+
+
+
+
 
 .. code:: bash
 
@@ -42,15 +73,9 @@ Inline comments
 
 
 
-Block comments
 
-.. code:: bash
-
-  --[[ this is a comment --]]
-
-
-
-## LValues & RValues
+LValues & RValues
+=================
 
 * **lvalue** Expressions that refer to the memory location
 * **rvalue** Refers to the value stored in a memory location
@@ -71,40 +96,52 @@ It's possible to have multiple lvalues and rvalues in a statement
 
 
 
-## Keywords
+Keywords
+========
 Reserved words and can not bused as variable names
 
 .. code:: bash
 
   and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while
 
+
+
+
+
+
+
+
+
+
+
 ---------
 Variables
 ---------
 
-Variables don't have types only values have types as with other dynamically typed programming languages.
-Values are stored in variables, passed are parameters and returned. The variable types are:
+As with many other dynamically typed languages, variables don't have types only values have types.
+Values are stored in variables, passed are parameters and returned. The variable types are **global**, **local**, and
+table fields. By default variables not declared **local** are global.
 
-* Global variables
-* Local variables
-* Table fields
+.. code:: bash
 
-Declaration
-===========
-
-Local variable definition. Variables point to **nil** if they are not initialized with a value.
-
-.. code:: lua
-
-  local a, b, c
+  a = 1         --> a is a global variable
+  local b = 1   --> b is a local variable
 
 
-
-Initializing a variable
+Variables point to **nil** if they are not initialized with a value.
 
 .. code:: lua
 
-  a = 10
+  local a, b, c         --> nil, nil, nil
+  d, e, f = 1, 2, 3     --> initialized values
+
+
+
+Initializing a variable with a value
+
+.. code:: lua
+
+  a = 10        --> global variables
   b = 20
   c = 30
 
@@ -113,7 +150,7 @@ Initializing a variable
   print("Value of c:", c)
 
 
-Swapping variables
+Swapping variable values
 
 .. code:: lua
 
@@ -135,42 +172,7 @@ Swapping variables
 
 
 
-
-
-
-Local
-_____
-
-Define variables, allocating memory and scope(local)
-
-.. code:: lua
-
-  local a, b, c, d
-
-
-
-
-
-Global
-______
-
-By default variables are global unless explicitly declared as **local**
-
-.. code:: lua
-
-  a, b = 1, 2
-
-
-
-
-
-Value Types
-___________
-
-
-Value types are:
-
-
+Variables can have these value types.
 
 
 :nil:       Values that dont' have data
@@ -184,27 +186,49 @@ Value types are:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----------
 Data Types
 ----------
 
 
+Numbers
+=======
 
+
+
+
+
+
+Strings
+=======
+
+
+
+------------------
+Abstract Data Type
+------------------
+
+
+Tables
+======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------
 Operators
 ---------
 
@@ -213,7 +237,7 @@ Operators tell the interpreter to perform a specific mathematical or logical man
 
 
 Arithmetic Operators
-++++++++++++++++++++
+====================
 
 .. table:: Arithmetic Operators
    :align: left
@@ -243,7 +267,7 @@ Examples
 
 
 Relational Operators
-++++++++++++++++++++
+====================
 
 .. table:: Relational Operators
    :align: left
@@ -281,7 +305,7 @@ Examples
 
 
 Logical Operators
-+++++++++++++++++
+=================
 
 .. table:: Logical Operators
    :align: left
@@ -304,7 +328,7 @@ Examples
 
 
 Misc Operators
-++++++++++++++
+==============
 
 
 .. table:: Misc Operators
@@ -327,7 +351,7 @@ Examples
 
 
 Operator Precedence
-+++++++++++++++++++
+===================
 
 
 .. table:: Operator Precedence
