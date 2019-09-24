@@ -2,7 +2,7 @@ Programming Template
 ====================
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 5
   :caption: Contents:
 
   ./language
