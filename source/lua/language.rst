@@ -1,6 +1,8 @@
+========
 Language
 ========
 
+-----
 Setup
 -----
 
@@ -12,7 +14,7 @@ Installed on Mac with the following.
 
 
 
-
+-------
 Syntax
 -------
 
@@ -72,7 +74,7 @@ Reserved words and can not bused as variable names
 
   and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while
 
-
+---------
 Variables
 ---------
 
@@ -84,7 +86,7 @@ Values are stored in variables, passed are parameters and returned. The variable
 * Table fields
 
 Declaration
-___________
+===========
 
 Local variable definition. Variables point to **nil** if they are not initialized with a value.
 
@@ -259,6 +261,18 @@ Examples
 
 .. code:: lua
 
+  > 1 == 1.0
+  true
+  > -1 == -1.00
+  true
+  > 0.1e5
+  10000.0
+  > 0.1e4
+  1000.0
+  > 0.1e4 == 1000.00
+  true
+  > 0.1e4 == 1000
+  true
   >
 
 
@@ -327,6 +341,81 @@ Operator Precedence
 
 Control Structures
 ------------------
+
+If Statement
+____________
+
+
+
+If statement example
+
+.. code:: lua
+
+  x = 40
+  if (a > 20)
+  then
+    -- If a is bigger then 20 print the following
+    print("a is bigger then 20")
+  end
+
+
+If else statement example
+
+.. code:: lua
+
+  x = 30
+  if ( a < 30)
+  then
+    -- ...
+    print("")
+  else
+    -- ...
+    print("")
+  end
+
+
+If else if else if...
+
+
+.. code:: lua
+
+  x = 400
+  if ( x == 400 )
+  then
+    -- ...
+    print("")
+  elseif (x == 400)
+  then
+    -- ...
+    print("")
+  elseif (a == 30)
+  then
+    -- ...
+  else
+    print("..")
+  end
+
+
+.. code:: lua
+
+    --[ local variable definition --]
+    a = 100;
+    b = 200;
+
+    --[ check the boolean condition --]
+
+    if( a == 100 )
+    then
+       --[ if condition is true then check the following --]
+       if( b == 200 )
+       then
+          --[ if condition is true then print the following --]
+          print("Value of a is 100 and b is 200" );
+       end
+    end
+
+    print("Exact value of a is :", a );
+    print("Exact value of b is :", b );
 
 
 
