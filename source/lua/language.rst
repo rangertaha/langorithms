@@ -14,10 +14,10 @@ Installed on Mac with the following.
 
 
 Syntax
-------
+-------
 
 
-Writen in C...
+Written in C...
 Has an interactive interpreter...
 
 
@@ -68,17 +68,13 @@ It's possible to have multiple lvalues and rvalues in a statement
 ## Keywords
 Reserved words and can not bused as variable names
 
-```bash
-and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while
-```
+.. code:: bash
 
-
-
+  and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while
 
 
 Variables
 ---------
-
 
 Variables don't have types only values have types as with other dynamically typed programming languages.
 Values are stored in variables, passed are parameters and returned. The variable types are:

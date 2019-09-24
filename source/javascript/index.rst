@@ -4,8 +4,8 @@ Javascript Programming
 ======================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Contents:
 
 
 
