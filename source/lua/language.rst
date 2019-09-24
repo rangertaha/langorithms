@@ -2,6 +2,10 @@
 Language
 ========
 
+Lua is an embedded lightweight language written in C.
+
+
+
 -----
 Setup
 -----
