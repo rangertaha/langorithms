@@ -165,7 +165,7 @@ Logical Operators
 
 Examples
 
-.. code:: lua
+.. code:: nodejs
 
   >
 
@@ -215,105 +215,11 @@ ____________
 
 
 
-If statement example
-
-.. code:: lua
-
-  x = 40
-  if (a > 20)
-  then
-    -- If a is bigger then 20 print the following
-    print("a is bigger then 20")
-  end
-
-
-If else statement example
-
-.. code:: lua
-
-  x = 30
-  if ( a < 30)
-  then
-    -- ...
-    print("")
-  else
-    -- ...
-    print("")
-  end
-
-
-If else if else if...
-
-
-.. code:: lua
-
-  x = 400
-  if ( x == 400 )
-  then
-    -- ...
-    print("")
-  elseif (x == 400)
-  then
-    -- ...
-    print("")
-  elseif (a == 30)
-  then
-    -- ...
-  else
-    print("..")
-  end
-
-
-.. code:: lua
-
-    --[ local variable definition --]
-    a = 100;
-    b = 200;
-
-    --[ check the boolean condition --]
-
-    if( a == 100 )
-    then
-       --[ if condition is true then check the following --]
-       if( b == 200 )
-       then
-          --[ if condition is true then print the following --]
-          print("Value of a is 100 and b is 200" );
-       end
-    end
-
-    print("Exact value of a is :", a );
-    print("Exact value of b is :", b );
-
-
-
-
 While Loop
 __________
 
 
 Continuously executes a statement if the condition is true
-
-.. code:: lua
-
-  while ( true )
-   do
-     print("This loops forever")
-  end
-
-
-
-.. code:: lua
-
-  a = 10
-  while (a < 20)
-   do
-
-   print("value of a is:", a)
-   a = a +1
-  end
-
-
 
 
 
@@ -342,22 +248,6 @@ ____________
 
 Object Oriented
 ---------------
-
-
-
-
-
-
-
-.. sidebar:: Sidebar Title
-   :subtitle: Optional Sidebar Subtitle
-
-   Subsequent indented lines comprise
-   the body of the sidebar, and are
-   interpreted as body elements.
-
-
-
 
 
 
