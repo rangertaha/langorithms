@@ -29,31 +29,6 @@ Syntax
 Comments
 ========
 
-Inline comments start with a **//** for the entire line. Block comments start with ** /* ** and end with ** */ **.
-
-
-.. code:: bash
-
-  /* This is a block comment
-
-
-To uncomment this **chunk** of code we add a hyphen.
-
-.. code:: bash
-
-  // This is a block comment
-
-
-
-
-
-.. code:: bash
-
-  a, b, c = 1, 2,3  // This is a list of variable declarations
-
-
-
-
 
 
 
@@ -61,15 +36,6 @@ To uncomment this **chunk** of code we add a hyphen.
 
 Keywords
 ========
-Reserved words and can not bused as variable names
-
-.. code:: bash
-
-  one two
-
-
-
-
 
 
 
