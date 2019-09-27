@@ -13,7 +13,7 @@ Installed on Mac with the following.
 
 .. code:: bash
 
-  brew install lua
+  brew install javascript
 
 
 
