@@ -12,7 +12,7 @@ See [Langorithms](https://langorithms.readthedocs.io/en/latest/) for online vers
 
 ## TODO
 
-<div style="text-align:center">TODO</div>
+<h1 style="text-align:center">TODO</h1>
 
 
 
