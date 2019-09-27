@@ -6,11 +6,11 @@ Langorithms
   :maxdepth: 2
   :caption: Contents:
 
-  template/index
-  javascript/index
   lua/index
+  javascript/index
   c/index
   rust/index
   golang/index
   python/index
   bash/index
+  template/index
