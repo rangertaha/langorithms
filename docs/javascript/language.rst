@@ -13,8 +13,6 @@ For mac download and install NodeJs_
 
 .. _NodeJs: https://nodejs.org/en/download/
 
-.. code:: bash
-
 
 
 -------

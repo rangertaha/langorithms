@@ -1,4 +1,4 @@
-# langorithms
+# [Langorithms](https://langorithms.readthedocs.io/en/latest/)
 
 Data structures and algorithms in various languages.  This project contains code snippets, notes, data structures,
 algorithms, and design patterns implemented in the following languages as a way to help me learn these languages.
@@ -10,10 +10,10 @@ See [Langorithms](https://langorithms.readthedocs.io/en/latest/) for all the not
 
 ## Javascript
 
-- [x] Tools
-- [x] Syntax
-- [x] Variables
-- [x] Data Types
+- [ ] Tools
+- [ ] Syntax
+- [ ] Variables
+- [ ] Data Types
 - [ ] Control Structures
 - [ ] Object Oriented Patterns
 - [ ] Standard Libraries
