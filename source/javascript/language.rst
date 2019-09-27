@@ -165,7 +165,7 @@ Logical Operators
 
 Examples
 
-.. code:: nodejs
+.. code:: javascript
 
   >
 
