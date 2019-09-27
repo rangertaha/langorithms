@@ -9,11 +9,11 @@ Language
 Setup
 -----
 
-Installed on Mac with the following.
+For mac download and install NodeJs_
+
+.. _NodeJs: https://nodejs.org/en/download/
 
 .. code:: bash
-
-  brew install javascript
 
 
 
@@ -40,9 +40,9 @@ Keywords
 
 
 
----------
-Variables
----------
+---------------------------
+Types, Values and Variables
+---------------------------
 
 
 
@@ -62,6 +62,10 @@ Numbers
 
 Strings
 =======
+
+Strings are immutable
+
+
 
 
 
