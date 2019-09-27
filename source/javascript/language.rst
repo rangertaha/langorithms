@@ -148,23 +148,6 @@ Relational Operators
 Examples
 
 
-.. code:: lua
-
-  > 1 == 1.0
-  true
-  > -1 == -1.00
-  true
-  > 0.1e5
-  10000.0
-  > 0.1e4
-  1000.0
-  > 0.1e4 == 1000.00
-  true
-  > 0.1e4 == 1000
-  true
-  >
-
-
 Logical Operators
 =================
 
