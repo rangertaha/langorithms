@@ -6,7 +6,15 @@ algorithms, and design patterns implemented in the following languages as a way 
 My goal is to spend an hour a day learning and documenting what I learned. I will have a check list for each language
 to help me track what I have learned and help me move forward.
 
-See [Langorithms](https://langorithms.readthedocs.io/en/latest/) for all the notes.
+See [Langorithms](https://langorithms.readthedocs.io/en/latest/) for online version.
+
+
+
+## TODO
+
+<div style="text-align:center">TODO</div>
+
+
 
 ## Javascript
 
@@ -19,7 +27,6 @@ See [Langorithms](https://langorithms.readthedocs.io/en/latest/) for all the not
 - [ ] Standard Libraries
 - [ ] Algorithms
 - [ ] Design Patterns
-
 
 
 ## Lua
