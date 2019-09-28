@@ -9,11 +9,9 @@ Language
 Setup
 -----
 
-Installed on Mac with the following.
+For mac download and install NodeJs_
 
-.. code:: bash
-
-  brew install lua
+.. _NodeJs: https://nodejs.org/en/download/
 
 
 
@@ -40,9 +38,9 @@ Keywords
 
 
 
----------
-Variables
----------
+---------------------------
+Types, Values and Variables
+---------------------------
 
 
 
@@ -62,6 +60,10 @@ Numbers
 
 Strings
 =======
+
+Strings are immutable
+
+
 
 
 
@@ -165,7 +167,7 @@ Logical Operators
 
 Examples
 
-.. code:: nodejs
+.. code:: javascript
 
   >
 

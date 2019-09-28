@@ -74,24 +74,6 @@ To uncomment this **chunk** of code we add a hyphen.
 
 
 
-LValues & RValues
-=================
-
-* **lvalue** Expressions that refer to the memory location
-* **rvalue** Refers to the value stored in a memory location
-
-Variables are lvalues and appear on teh left side
-
-.. code:: bash
-
-  a = 10
-
-
-It's possible to have multiple lvalues and rvalues in a statement
-
-.. code:: bash
-
-  a, b = 10,20
 
 
 
@@ -114,13 +96,39 @@ Reserved words and can not bused as variable names
 
 
 
----------
-Variables
----------
+---------------------------
+Types, Values and Variables
+---------------------------
+
+LValues & RValues
+=================
+
+* **lvalue** Expressions that refer to the memory location
+* **rvalue** Refers to the value stored in a memory location
+
+Variables are lvalues and appear on teh left side
+
+.. code:: bash
+
+  a = 10
+
+
+It's possible to have multiple lvalues and rvalues in a statement
+
+.. code:: bash
+
+  a, b = 10,20
+
+
+
+Global and Local
+=================
 
 As with many other dynamically typed languages, variables don't have types only values have types.
 Values are stored in variables, passed are parameters and returned. The variable types are **global**, **local**, and
 table fields. By default variables not declared **local** are global.
+
+
 
 .. code:: bash
 

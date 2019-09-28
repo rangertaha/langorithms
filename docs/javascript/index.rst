@@ -1,7 +1,7 @@
-.. NodeJs Programming
+.. Javascript Programming
 
-NodeJs Programming
-==================
+Javascript Programming
+======================
 
 .. toctree::
 
