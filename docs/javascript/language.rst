@@ -60,7 +60,45 @@ static with double in super
 Types, Values and Variables
 ---------------------------
 
+
+Literal Values
+==============
+
+Liternal values such as 'one', 'two', and 3' can be combined with opperators
+For example:
+
+.. code::javascript
+  "hello" + "one" + "two" + 1, 7    //-->
+
+'1  // numeric literal
+2  // soem text
+
+
+
+
+
 JavaScript is **untyped** so a variable can hold any data type and you dont' need to declare the type during declaration.
+
+.. table:: Arithmetic Operators
+   :align: left
+   :widths: 2, 5, 10
+
+   ========= =========== =============================
+     value     Type       Constructor
+   ========= =========== =============================
+       1      'number'    Number()
+ 1.23 'number' Number()
+hello text   'string'  String()
+[]      object     Array()j
+
+{}    'object' Object()
+
+true   'boolean'   Boolean()
+
+f f() {}      'function'  Function()
+
+
+   ========= =========== =============================
 
 
 
@@ -152,9 +190,9 @@ Arithmetic Operators
    :align: left
    :widths: 2, 10
 
-   ===========  ================
-     Operator    Description
-   ===========  ================
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
         \+       Addition
         \-       Subtraction
         \*       Multiplication
@@ -162,7 +200,7 @@ Arithmetic Operators
         %        Modulus
         \+\+     Increment
         \-\-     Decrement
-   ===========  ================
+   ===========  ==================================== ==============================
 
 
 
@@ -188,16 +226,16 @@ Relational Operators
    :align: left
    :widths: 2, 10
 
-   ===========  ============================
-     Operator    Description
-   ===========  ============================
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
         ==       Equals
         !=       Not Equals
         >        Greater than
         <        Less than
         >=       Greater than or equals to
         <=       Less than or equals to
-   ===========  ============================
+   ===========  ==================================== ==============================
 
 
 
@@ -222,13 +260,13 @@ Logical Operators
    :align: left
    :widths: 2, 10
 
-   ===========  ============================
-     Operator    Description
-   ===========  ============================
-        &&       Logical AND
-        ||       Logical OR
-        !        Logical NOT
-   ===========  ============================
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
+        &&       Logical AND                          :js:`(A & B)`     //-->
+        ||       Logical OR                           :js:`(A & B)`     //-->
+        !        Logical NOT                          :js:`(A & B)`     //-->
+   ===========  ==================================== ==============================
 
 
 
@@ -350,10 +388,10 @@ Operator Precedence
    :align: left
    :widths: 2, 10
 
-   ===========  =========================================
-     Operator    Description
-   ===========  =========================================
-   ===========  =========================================
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
+   ===========  ==================================== ==============================
 
 
 
@@ -405,8 +443,21 @@ Object Oriented
 
 
 
+Modules
+-------
 
+Importing modules
 
+.. code::javascript
+  import {Mouse, Keyboard} from "./input.js"
+  // ...
+  let keyboard = new Keyboard()
+
+Exporting functions
+
+.. code::javascript
+  //...
+  export = { FirstFunction, SecondFunction }
 
 
 
