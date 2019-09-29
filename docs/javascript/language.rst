@@ -2,7 +2,14 @@
 Language
 ========
 
-...
+
+
+
+
+
+
+
+
 
 
 -----
@@ -318,12 +325,59 @@ Build-In Functions
 
 Type
 
-.. code:: lua
 
-  print(type("Hello"))
-  print(type(10))
-  print(type(nil))
-  print(type(print))
+
+
+
+-------------------------------------------------------- NodeJs --------------------------------------------------------
+
+NodeJs is a server side programming language based on chromes's V8 engine.
+
+
+
+
+Features
+--------
+
+* Event Driven, non-blocking, and asynchronous
+
+
+* Fast execution compared to Python
+
+* Single threaded.
+
+* Open Source under MIT
+
+
+
+Server Applications
+------------
+
+Major componets are
+* Modules
+* Server
+* Requests/Response
+
+
+
+.. code:: javascript
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
