@@ -2,10 +2,16 @@
 Language
 ========
 
+.. role:: js(code)
+   :language: javascript
 
 
+* Most popular programming language
+* Client side
+* Server side with NodeJs
 
 
+Interpreted language
 
 
 
@@ -42,6 +48,11 @@ Comments
 Keywords
 ========
 
+abstract else instanceof switch boolean enum int synchronized break export interface this byte extends long throw
+case false native throws catch final new transient char finally null true class float package try cosnt for private typeof
+continue function protected var debugger goto public void default if return volitile delete implemets short while do import
+static with double in super
+
 
 
 
@@ -49,12 +60,28 @@ Keywords
 Types, Values and Variables
 ---------------------------
 
+JavaScript is **untyped** so a variable can hold any data type and you dont' need to declare the type during declaration.
 
 
 
 ----------
 Data Types
 ----------
+
+Numbers: There is no distiction between integers and floating point values
+Strings: "hello people"
+Boolean: true, false
+null:
+undefined:
+objects:
+
+
+
+
+
+
+
+
 
 
 Numbers
@@ -106,8 +133,20 @@ Operators
 Operators tell the interpreter to perform a specific mathematical or logical manipulation
 
 
+
+
+
+
+
+
+
+
+
+
 Arithmetic Operators
 ====================
+
+**Assumes** :js:`A=10` and :js:`B=20`
 
 .. table:: Arithmetic Operators
    :align: left
@@ -121,23 +160,29 @@ Arithmetic Operators
         \*       Multiplication
         /        Division
         %        Modulus
-        ^        Exponent
-        \-       Unary
+        \+\+     Increment
+        \-\-     Decrement
    ===========  ================
 
 
-Examples
 
 
-.. code:: lua
 
-  a, b, c, d = 1, 2, 3, 4
-  a + b
-  3
+
+
+
+
+
+
+
+
+
 
 
 Relational Operators
 ====================
+
+**Assumes** :js:`A=10` and :js:`B=20`
 
 .. table:: Relational Operators
    :align: left
@@ -147,18 +192,31 @@ Relational Operators
      Operator    Description
    ===========  ============================
         ==       Equals
-        ~=       Not Equals
+        !=       Not Equals
         >        Greater than
         <        Less than
         >=       Greater than or equals to
         <=       Less than or equals to
    ===========  ============================
 
-Examples
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Logical Operators
 =================
+
+**Assumes** :js:`A=10` and :js:`B=20`
 
 .. table:: Logical Operators
    :align: left
@@ -167,16 +225,95 @@ Logical Operators
    ===========  ============================
      Operator    Description
    ===========  ============================
-        and       Logical AND
-        or        Logical OR
-        not       Logical NOT
+        &&       Logical AND
+        ||       Logical OR
+        !        Logical NOT
    ===========  ============================
 
-Examples
 
-.. code:: javascript
 
-  >
+
+
+
+
+
+
+
+
+
+
+
+Bitwise Operators
+=================
+
+
+
+**Assumes** :js:`A=10` and :js:`B=20`
+
+.. role:: js(code)
+   :language: javascript
+
+
+.. table:: Bitwise Operators
+   :align: left
+   :widths: 2, 20, 10
+
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
+        &        Bitwise AND                         :js:`(A & B)`     //--> 10
+        |        Bitwise OR                          :js:`(A | B)`     //--> 20
+        ^        Bitwise XOR                         :js:`(A ^ B)`     //--> 1
+        ~        Bitwise Not is the unary operator   :js:`(~A)`        //--> -10
+       <<        Left shift                          :js:`(A << 1)`        //-->
+       >>        Right shift                         :js:`(A >> 1)`        //-->
+       \>>>      Right shift with Zero               :js:`(A >>> 1)`        //-->
+   ===========  ==================================== ==============================
+
+
+
+
+
+
+
+
+Assignment Operators
+====================
+
+
+
+**Assumes** :js:`A=10` and :js:`B=20`
+
+
+
+
+.. table:: Assignment Operators
+   :align: left
+   :widths: 2, 20, 10
+
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
+      c            c                                    c
+   ===========  ==================================== ==============================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -188,14 +325,20 @@ Misc Operators
    :align: left
    :widths: 2, 10
 
-   ===========  =========================================
-     Operator    Description
-   ===========  =========================================
-        \..       Concatenates two strings
-        \#        Returns the length of a string or table
-   ===========  =========================================
+   ===========  ==================================== ==============================
+     Operator    Description                          Example
+   ===========  ==================================== ==============================
+        ?:           c                                    c
+   ===========  ==================================== ==============================
 
-Examples
+
+
+
+
+
+
+
+
 
 
 
@@ -351,7 +494,7 @@ Features
 
 
 Server Applications
-------------
+-------------------
 
 Major componets are
 * Modules
@@ -360,9 +503,6 @@ Major componets are
 
 
 
-.. code:: javascript
-
-  
 
 
 

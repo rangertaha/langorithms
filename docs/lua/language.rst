@@ -178,9 +178,11 @@ Swapping variable values
 
   print(c)
 
+----------
+Data Types
+----------
 
-
-Variables can have these value types.
+Value types
 
 
 :nil:       Values that dont' have data
@@ -193,10 +195,27 @@ Variables can have these value types.
 :table:     Values can be arrays, symbol tables, sets, graphs, trees, and more
 
 
+Using the **type** function to identify teh variable type
 
-----------
-Data Types
-----------
+.. code:: lua
+
+> print(type("hello people"))     --> string
+string
+> print(type(type(ABC)))          --> string
+string
+> print(type(nil))                --> nil
+nil
+> print(type(print))              --> function
+function
+> print(type(true))               --> boolean
+boolean
+>
+> a = 30
+> print(type(5.8*a))
+
+
+
+
 
 
 Numbers
