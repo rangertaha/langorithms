@@ -6,8 +6,8 @@ Langorithms
   :maxdepth: 2
   :caption: Contents:
 
-  lua/index
   javascript/index
+  lua/index
   c/index
   rust/index
   golang/index

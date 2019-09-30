@@ -60,45 +60,163 @@ static with double in super
 Types, Values and Variables
 ---------------------------
 
+We can choose to define variables with **var**, **let**, and **const**. However, JavaScript is *untyped* so a variable can
+hold any data type and you dont need to declare the type during declaration.
+
+LValues & RValues
+=================
+
 
 Literal Values
 ==============
 
-Liternal values such as 'one', 'two', and 3' can be combined with opperators
-For example:
-
-.. code::javascript
-  "hello" + "one" + "two" + 1, 7    //-->
-
-'1  // numeric literal
-2  // soem text
 
 
-
-
-
-JavaScript is **untyped** so a variable can hold any data type and you dont' need to declare the type during declaration.
-
-.. table:: Arithmetic Operators
+.. table:: Literal Types and Constructors
    :align: left
-   :widths: 2, 5, 10
+   :widths: 5, 5, 10
 
-   ========= =========== =============================
-     value     Type       Constructor
-   ========= =========== =============================
-       1      'number'    Number()
- 1.23 'number' Number()
-hello text   'string'  String()
-[]      object     Array()j
+   =========== =========== =============================
+    Value      Type         Constructor
+   =========== =========== =============================
+    1           number      Number()
+    1.23        number      Number()
+    123n        bigint      BigInt()
+    hello       string      String()
+    []          object      Array()j
+    {}          object      Object()
+    true        boolean     Boolean()
+    f f() {}    function    Function()
+    null        null
+    undefined   undefined
+   =========== =========== =============================
 
-{}    'object' Object()
 
-true   'boolean'   Boolean()
+Literal numeric and string values combined
 
-f f() {}      'function'  Function()
+.. code:: javascript
+
+  "hello" + "one" + "two" + 1 +  7      //--> helloonetwo17
+  "hello" + "one" + "two" + (1 +  7)    //--> helloonetwo8
+  Number(1) + String("hello")           //--> 1hello
 
 
-   ========= =========== =============================
+
+We can use the **typeof** function to return the type of value
+
+.. code:: javascript
+
+  f = function(x){return x + 1}
+
+  typeof('hello')        //--> string
+  typeof('1')            //--> number
+  typeof(1)              //--> number
+  typeof([])             //--> object
+  typeof({})             //--> object
+  typeof(f)              //--> function
+  typeof f               //--> function
+
+
+
+Constructors
+------------
+
+Constructors build and return objects of the given type
+
+.. code:: javascript
+
+  let str = new String('hello')
+
+  typeof str                        // object
+  typeof str.valueOf()              // string
+
+
+.. code:: javascript
+
+  let nm = new Number(1000)
+
+  typeof nm                   // object
+  typeof nm.valueOf()         // number
+
+
+Custom constructor example
+
+.. code:: javascript
+
+  let Person = function() {
+    this.steps = 0;
+    this.walk = function(){
+      this.steps++;
+    };
+  }
+
+  >
+  > let john = new Person()
+  undefined
+  > john.walk()
+  undefined
+  > john.walk()
+  undefined
+  >
+  > john.steps
+  2
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pass by Reference
+-----------------
+
+In JavaScript values are passed by reference
+
+.. code:: javascript
+
+  let person = {name: 'john'};
+  let john = person;
+
+  person.name = 'John Smith'        //--> 'John Smith'
+
+  person.name                       //--> 'John Smith'
+  john.name                         //--> 'John Smith'
+
+
+
+Variable Scope
+--------------
+
+Variables defined with **let** or **const** cannot be redefined inside the scope of a function.
+
+.. code:: javascript
+
+  let a = 1
+  let b = 2
+
+  function f(){
+    let a = 5;
+  }
+
+  f()            // ReferenceError: a is not defined
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,6 +252,28 @@ Strings
 =======
 
 Strings are immutable
+
+
+Template Strings
+----------------
+
+Back-tick is used to create template strings
+
+.. code:: javascript
+
+  let num = 300
+  `${num} is the number of ...`  // '300 is the number of ...'
+
+
+You can not used template strings to define object literal property names.
+
+.. code:: javascript
+
+  a = 'name'
+  let obj = {`a`: "James"}            // SyntaxError: Unexpected template string
+
+
+
 
 
 
@@ -188,7 +328,7 @@ Arithmetic Operators
 
 .. table:: Arithmetic Operators
    :align: left
-   :widths: 2, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
@@ -224,7 +364,7 @@ Relational Operators
 
 .. table:: Relational Operators
    :align: left
-   :widths: 2, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
@@ -258,7 +398,7 @@ Logical Operators
 
 .. table:: Logical Operators
    :align: left
-   :widths: 2, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
@@ -288,21 +428,19 @@ Bitwise Operators
 
 **Assumes** :js:`A=10` and :js:`B=20`
 
-.. role:: js(code)
-   :language: javascript
 
 
 .. table:: Bitwise Operators
    :align: left
-   :widths: 2, 20, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
    ===========  ==================================== ==============================
-        &        Bitwise AND                         :js:`(A & B)`     //--> 10
-        |        Bitwise OR                          :js:`(A | B)`     //--> 20
-        ^        Bitwise XOR                         :js:`(A ^ B)`     //--> 1
-        ~        Bitwise Not is the unary operator   :js:`(~A)`        //--> -10
+        &        Bitwise AND                         :js:`(A & B)`     //-->
+        |        Bitwise OR                          :js:`(A | B)`     //-->
+        ^        Bitwise XOR                         :js:`(A ^ B)`     //-->
+        ~        Bitwise Not is the unary operator   :js:`(~A)`        //-->
        <<        Left shift                          :js:`(A << 1)`        //-->
        >>        Right shift                         :js:`(A >> 1)`        //-->
        \>>>      Right shift with Zero               :js:`(A >>> 1)`        //-->
@@ -327,7 +465,7 @@ Assignment Operators
 
 .. table:: Assignment Operators
    :align: left
-   :widths: 2, 20, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
@@ -359,15 +497,17 @@ Misc Operators
 ==============
 
 
+**Assumes** :js:`A=10` and :js:`B=20`
+
 .. table:: Misc Operators
    :align: left
-   :widths: 2, 10
+   :widths: 5, 10, 10
 
-   ===========  ==================================== ==============================
+   ===========  ==================================== ========================================
      Operator    Description                          Example
-   ===========  ==================================== ==============================
-        ?:           c                                    c
-   ===========  ==================================== ==============================
+   ===========  ==================================== ========================================
+        ? :       Ternary operator (if,else)          :js:`n = (1 == 2) ? 10: 20;`  // 20
+   ===========  ==================================== ========================================
 
 
 
@@ -386,13 +526,16 @@ Operator Precedence
 
 .. table:: Operator Precedence
    :align: left
-   :widths: 2, 10
+   :widths: 5, 10, 10
 
    ===========  ==================================== ==============================
      Operator    Description                          Example
    ===========  ==================================== ==============================
    ===========  ==================================== ==============================
 
+
+Symbol
+------
 
 
 

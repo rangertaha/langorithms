@@ -8,6 +8,7 @@ Linked Lists
 ------------
 
 A node of a linked list
+
 .. code:: c
 
   struct Node {
