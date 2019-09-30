@@ -281,26 +281,25 @@ You can not used template strings to define object literal property names.
 
 
 
-
-
-
-
-
-------------------
-Abstract Data Type
-------------------
-
-
-Tables
-======
+Arrays
+------
 
 
 
 
 
 
+Objects
+-------
 
 
+
+
+
+
+-----
+Scope
+-----
 
 
 
@@ -316,16 +315,6 @@ Operators
 
 
 Operators tell the interpreter to perform a specific mathematical or logical manipulation
-
-
-
-
-
-
-
-
-
-
 
 
 Arithmetic Operators
@@ -586,6 +575,10 @@ Rest & Spread allows use to pack and unpack N number of values of an array.
 
 
 
+Closures
+--------
+
+
 
 
 
@@ -629,6 +622,21 @@ ____________
 
 
 
+Functions
+---------
+
+Arrow Functions
+_______________
+
+
+Prototypes
+----------
+
+
+
+
+
+
 
 
 
@@ -659,49 +667,11 @@ Exporting functions
 
 
 
-Loops
-
-Decision Making
-
-Functions
-
-Strings
-
-Arrays
-
-Interators
-
-
-Tables
-
-Modules
-
-Metatables
-
-Coroutines
-
-File I/O
-
-Error Handling
-
 
 
 // ------------------
 
-Debugging
-
-Garbage Collection
-
-Object Oriented
-
-Web Programming
-
-Database Access
-
-Game Programming
-
-
-// ------------------
+## Networking
 
 ## Standard Library
 
