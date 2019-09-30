@@ -61,7 +61,9 @@ Types, Values and Variables
 ---------------------------
 
 We can choose to define variables with **var**, **let**, and **const**. However, JavaScript is *untyped* so a variable can
-hold any data type and you dont need to declare the type during declaration.
+hold any data type and you dont need to declare the type during declaration. If variables are not defined it defaults
+to **var**.
+
 
 :var: From the original spec
 :let: Limits the scope to where it was defined
@@ -375,7 +377,9 @@ Relational Operators
      Operator    Description                          Example
    ===========  ==================================== ==============================
         ==       Equals
+        ===
         !=       Not Equals
+        !==
         >        Greater than
         <        Less than
         >=       Greater than or equals to
@@ -408,7 +412,7 @@ Logical Operators
    ===========  ==================================== ==============================
      Operator    Description                          Example
    ===========  ==================================== ==============================
-        &&       Logical AND                          :js:`(A & B)`     //-->
+        &&       Logical AND                          :js:`(A & B)`     //
         ||       Logical OR                           :js:`(A & B)`     //-->
         !        Logical NOT                          :js:`(A & B)`     //-->
    ===========  ==================================== ==============================
@@ -443,7 +447,7 @@ Bitwise Operators
      Operator    Description                          Example
    ===========  ==================================== ==============================
         &        Bitwise AND                         :js:`(A & B)`     //-->
-        |        Bitwise OR                          :js:`(A | B)`     //-->
+        \|       Bitwise OR                          :js:`(A | B)`     //-->
         ^        Bitwise XOR                         :js:`(A ^ B)`     //-->
         ~        Bitwise Not is the unary operator   :js:`(~A)`        //-->
        <<        Left shift                          :js:`(A << 1)`        //-->
@@ -541,6 +545,51 @@ Operator Precedence
 
 Symbol
 ------
+
+
+
+
+Rest & Spread
+-------------
+
+Rest & Spread allows use to pack and unpack N number of values of an array.
+
+
+
+.. code:: javascript
+
+  let a = [1,2]
+  let b = [3,4]
+  c = [...a, ...b]    // [ 1, 2, 3, 4 ]
+
+
+
+.. code:: javascript
+
+  function sum(...args) {
+    console.log(args);
+  }
+
+ sum(1,2)                  // [ 1, 2 ]
+ sum(1,2, 3, 4, 5, 6)      // [ 1, 2, 3, 4, 5, 6 ]
+
+
+
+.. code:: javascript
+
+  function sum(a, b, ...args) {
+    console.log(args);
+    return a + b;
+  }
+
+ sum(1, 2, 3, 4, 5, 6)      // [ 3, 4, 5, 6 ]
+
+
+
+
+
+
+
 
 
 
