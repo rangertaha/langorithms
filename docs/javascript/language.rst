@@ -590,7 +590,7 @@ Closures
 Control Structures
 ------------------
 
-If Statement
+If Condition
 ____________
 
 
