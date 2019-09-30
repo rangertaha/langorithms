@@ -63,6 +63,11 @@ Types, Values and Variables
 We can choose to define variables with **var**, **let**, and **const**. However, JavaScript is *untyped* so a variable can
 hold any data type and you dont need to declare the type during declaration.
 
+:var: From the original spec
+:let: Limits the scope to where it was defined
+:const: Same as **let** but you can't reassign the value
+
+
 LValues & RValues
 =================
 
