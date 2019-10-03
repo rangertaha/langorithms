@@ -210,11 +210,46 @@ Variables defined with **let** or **const** cannot be redefined inside the scope
 
 
 
+Destructuring Assignment
+-------------------------
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+
+
+.. code:: javascript
+
+  > [a, b] = [1, 2]
+  [ 1, 2 ]
+  > a
+  1
+  > b
+  2
 
 
 
 
+.. code:: javascript
 
+  > var x = [1, 2, 3, 4, 5];
+  undefined
+  > var [a, b] = x;
+  undefined
+  > x
+  [ 1, 2, 3, 4, 5 ]
+  > a
+  1
+  > b
+  2
+  > var [a, b, ...args] = x;
+  undefined
+  > args
+  [ 3, 4, 5 ]
+  > a
+  1
+  > b
+  2
+  >
 
 
 
@@ -740,6 +775,71 @@ Assigning functions to variables
 
 Arrow Functions
 _______________
+
+The normal way
+.. code:: javascript
+  
+  let myFunc = function(a, b) {
+    return a + b
+  }
+
+  myFunc(3, 3)                                 // 6
+
+  
+  
+With arrow functions
+.. code:: javascript
+
+  let myArrowFunc = (a, b) = {return a + b}
+  myArrowFunc(3, 3)                             // 6
+
+  
+With arrow function
+.. code:: javascript
+
+  let myArrowFunc2 = (a, b) => a + b
+  myArrowFunc2(3, 3)                            // 6
+
+
+
+
+Returning an object literal via arrow function
+
+.. code:: javascript
+
+  let user = (id, username) => ({id: id, username: username})
+
+  user(1, 'myname1')                                 //  { id: 1, username: 'myname1' }
+
+
+
+.. code:: javascript
+
+  const osTypes = [
+    { name:'mac', price:'free' },
+    { name:'linux', price:'free' },
+    { name:'windows', price:'$100' }
+  ]
+  prices = osTypes.map(os = os.price)              // [ 'free', 'free', '$100' ]
+
+
+
+
+Array filters technique the
+
+.. code:: javascript
+
+  const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  let m  = numList.filter(
+    function(i){
+      return i % 3 === 0
+    })
+
+  console.log(m)                             // [ 3, 6, 9 ]
+
+
+
+
 
 
 Prototypes
