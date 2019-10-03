@@ -533,16 +533,52 @@ Misc Operators
    ===========  ==================================== ========================================
      Operator    Description                          Example
    ===========  ==================================== ========================================
-        ? :       Ternary operator (if,else)          :js:`n = (1 == 2) ? 10: 20;`  // 20
+        ? :       Ternary operator (if,else)          :js:`n = (1 == 2) ? 10: 20`   // 20
+        ,         Comma operator                      :js:`x = 0; x = (x++, x)`     // 1
    ===========  ==================================== ========================================
 
 
+Comma Operators
+________________
+
+Comma operators evaluates operands left to right and returns the last operand
+
+
+.. code:: javascript
+
+  let x = 0
+  x = (x++, x)            // 1
+
+  x = (x++, x++, x++, x)  // 4
+
+
+Using comma operators to supply multiple values to a for loop.
+
+.. code:: javascript
+
+  > for (a=0, b=1; a<= 10; a++, b--)
+  ... console.log(a,b)
+  0 1
+  1 0
+  2 -1
+  3 -2
+  4 -3
+  5 -4
+  6 -5
+  7 -6
+  8 -7
+  9 -8
+  10 -9
 
 
 
+.. code:: javascript
 
+  function myFunc() {
+    var x = 0;
 
-
+    return (x += 1, x); // the same as return ++x;
+  }
 
 
 
@@ -636,6 +672,15 @@ __________
 
 
 Continuously executes a statement if the condition is true
+
+
+.. code:: javascript
+
+  while (x < 10) {
+    x++                 // 9
+  }
+
+
 
 
 
@@ -836,6 +881,42 @@ Array filters technique the
     })
 
   console.log(m)                             // [ 3, 6, 9 ]
+
+
+
+
+
+
+
+
+Promises
+--------
+
+
+A promise is an object that represents the results of asynchronous execution.
+
+.. code:: javascript
+
+  >
+
+
+
+Chaining
+________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
