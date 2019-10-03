@@ -498,8 +498,8 @@ Misc Operators
    ===========  ==================================== ========================================
      Operator    Description                          Example
    ===========  ==================================== ========================================
-        ? :       Ternary operator (if,else)          :js:`n = (1 == 2) ? 10: 20;`  // 20
-        ,         Comma operator                      :js:` x = 0; x = (x++, x)`  // 1
+        ? :       Ternary operator (if,else)          :js:`n = (1 == 2) ? 10: 20`   // 20
+        ,         Comma operator                      :js:`x = 0; x = (x++, x)`     // 1
    ===========  ==================================== ========================================
 
 
@@ -544,16 +544,6 @@ Using comma operators to supply multiple values to a for loop.
 
     return (x += 1, x); // the same as return ++x;
   }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -647,6 +637,15 @@ __________
 
 
 Continuously executes a statement if the condition is true
+
+
+.. code:: javascript
+
+  while (x < 10) {
+    x++                 // 9
+  }
+
+
 
 
 
@@ -786,6 +785,42 @@ Assigning functions to variables
 
 Arrow Functions
 _______________
+
+
+
+
+Promises
+--------
+
+
+A promise is an object that represents the results of asynchronous execution.
+
+.. code:: javascript
+
+  >
+
+
+
+Chaining
+________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Prototypes
