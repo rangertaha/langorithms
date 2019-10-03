@@ -10,9 +10,7 @@ Language
 * Client side
 * Server side with NodeJs
 
-
-Interpreted language
-
+* Interpreted language
 
 
 
@@ -157,16 +155,12 @@ Custom constructor example
     };
   }
 
-  >
-  > let john = new Person()
-  undefined
-  > john.walk()
-  undefined
-  > john.walk()
-  undefined
-  >
-  > john.steps
-  2
+  let john = new Person()
+  john.walk()
+  john.walk()
+
+  john.steps                  // 2
+
 
 
 
@@ -281,26 +275,25 @@ You can not used template strings to define object literal property names.
 
 
 
-
-
-
-
-
-------------------
-Abstract Data Type
-------------------
-
-
-Tables
-======
+Arrays
+------
 
 
 
 
 
 
+Objects
+-------
 
 
+
+
+
+
+-----
+Scope
+-----
 
 
 
@@ -316,16 +309,6 @@ Operators
 
 
 Operators tell the interpreter to perform a specific mathematical or logical manipulation
-
-
-
-
-
-
-
-
-
-
 
 
 Arithmetic Operators
@@ -606,6 +589,17 @@ Rest & Spread allows use to pack and unpack N number of values of an array.
 
 
 
+Closures
+--------
+
+
+
+
+
+
+
+
+
 
 
 
@@ -617,7 +611,7 @@ Rest & Spread allows use to pack and unpack N number of values of an array.
 Control Structures
 ------------------
 
-If Statement
+If Condition
 ____________
 
 
@@ -631,9 +625,41 @@ Continuously executes a statement if the condition is true
 
 
 
+
+
 For Loop
 ________
 
+
+# :js:`for (initialize; condition; increment);`
+# :js:`for (initialize; condition; increment) statement;`
+# :js:`for (initialize; condition; increment) { multiple statements; }`
+
+
+
+
+.. code:: javascript
+
+  nums = [5, 3, 1, 5, 9, 3]
+  let a = 0
+  for (let i = 0; i < nums.length; i++)     //  26
+    a += nums[i];
+
+
+
+The same can be done with a reducer
+.. coder:: javascript
+
+  const b = (counter, value) => counter + value;
+  nums = [5, 3, 1, 5, 9, 3]
+  nums.reduce(b)                                        //  26
+
+
+Infinite loop example
+.. code:: javascript
+
+ for(;;)
+  console.log("hello world")
 
 
 
@@ -645,6 +671,101 @@ _________________
 
 Nested Loops
 ____________
+
+
+
+
+Functions
+---------
+
+> function myfunc(a, b, c, d, e="EE") {
+... console.log(arguments);
+... console.log("THIS: " +  this);
+... }
+
+> myfunc(a, b, c, [])
+[Arguments] { '0': 1, '1': 2, '2': 3, '3': [] }
+
+
+
+
+> function myfunc(a, b, c, d, e="EE") {
+... console.log(this);
+... }
+undefined
+> myfunc()
+Object [global] {
+  global: [Circular],
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setInterval: [Function: setInterval],
+  setTimeout: [Function: setTimeout] { [Symbol(util.promisify.custom)]: [Function] },
+  queueMicrotask: [Function: queueMicrotask],
+  clearImmediate: [Function: clearImmediate],
+  setImmediate: [Function: setImmediate] {
+    [Symbol(util.promisify.custom)]: [Function]
+  },
+  myfunc: [Function: myfunc]
+}
+
+Anonymous Functions
+-------------------
+
+An anonymous function used as an argument to the setTimeout function.
+
+.. code:: javascript
+
+  > setTimeout(function() {console.log(arguments)},  1000);
+  Timeout {
+    _idleTimeout: 1000,
+    _idlePrev: [TimersList],
+    _idleNext: [TimersList],
+    _idleStart: 667838,
+    _onTimeout: [Function],
+    _timerArgs: undefined,
+    _repeat: null,
+    _destroyed: false,
+    [Symbol(refed)]: true,
+    [Symbol(asyncId)]: 1647,
+    [Symbol(triggerId)]: 5
+  }
+  > [Arguments] {}
+
+
+Assigning functions to variables
+
+
+
+.. code:: javascript
+
+  > let myFunc = function(a, b, c="Hi"){
+  ...   console.log(arguments);
+  ...   console.log(a, b, c)
+  ... }
+  undefined
+  >
+  > myFunc()
+  [Arguments] {}
+  undefined undefined Hi
+  undefined
+
+
+
+
+
+
+
+
+
+
+Arrow Functions
+_______________
+
+
+Prototypes
+----------
+
+
 
 
 
@@ -679,49 +800,11 @@ Exporting functions
 
 
 
-Loops
-
-Decision Making
-
-Functions
-
-Strings
-
-Arrays
-
-Interators
-
-
-Tables
-
-Modules
-
-Metatables
-
-Coroutines
-
-File I/O
-
-Error Handling
-
 
 
 // ------------------
 
-Debugging
-
-Garbage Collection
-
-Object Oriented
-
-Web Programming
-
-Database Access
-
-Game Programming
-
-
-// ------------------
+## Networking
 
 ## Standard Library
 

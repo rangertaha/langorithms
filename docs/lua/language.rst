@@ -197,21 +197,17 @@ Value types
 
 Using the **type** function to identify teh variable type
 
+
 .. code:: lua
 
-> print(type("hello people"))     --> string
-string
-> print(type(type(ABC)))          --> string
-string
-> print(type(nil))                --> nil
-nil
-> print(type(print))              --> function
-function
-> print(type(true))               --> boolean
-boolean
->
-> a = 30
-> print(type(5.8*a))
+  print(type("hello people"))     --> string
+  print(type(type(ABC)))          --> string
+  print(type(nil))                --> nil
+  print(type(print))              --> function
+  print(type(true))               --> boolean
+
+  a = 30
+  print(type(5.8*a))
 
 
 
