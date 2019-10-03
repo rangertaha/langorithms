@@ -506,6 +506,8 @@ Misc Operators
 Comma Operators
 ________________
 
+Comma operators evaluates operands left to right and returns the last operand
+
 
 .. code:: javascript
 
@@ -515,9 +517,33 @@ ________________
   x = (x++, x++, x++, x)  // 4
 
 
+Using comma operators to supply multiple values to a for loop.
+
+.. code:: javascript
+
+  > for (a=0, b=1; a<= 10; a++, b--)
+  ... console.log(a,b)
+  0 1
+  1 0
+  2 -1
+  3 -2
+  4 -3
+  5 -4
+  6 -5
+  7 -6
+  8 -7
+  9 -8
+  10 -9
 
 
 
+.. code:: javascript
+
+  function myFunc() {
+    var x = 0;
+
+    return (x += 1, x); // the same as return ++x;
+  }
 
 
 
