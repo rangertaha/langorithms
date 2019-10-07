@@ -447,21 +447,22 @@ Assignment Operators
 ====================
 
 
-
-**Assumes** :js:`A=10` and :js:`B=20`
-
-
-
+These operators assign value to the variable.
 
 .. table:: Assignment Operators
    :align: left
    :widths: 5, 10, 10
 
-   ===========  ==================================== ==============================
-     Operator    Description                          Example
-   ===========  ==================================== ==============================
-      c            c                                    c
-   ===========  ==================================== ==============================
+   ===========  ==================================== =============== ========
+     Operator    Description                          Example         Value
+   ===========  ==================================== =============== ========
+    =            Assignment                           A = 1           1
+    +=           Addition & Assignment                A += 3          4
+    -=           Subtraction & Assignment             A -= 1          3
+    *=           Multiplication & Assignment          A *= 3          9
+    /=           Division & Assignment                A /= 4          2.25
+    %=           Modulus & Assignment                 A %= 1          0.25
+   ===========  ==================================== =============== ========
 
 
 
