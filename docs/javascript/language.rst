@@ -14,8 +14,6 @@ Language
 
 
 
-
-
 -----
 Setup
 -----
@@ -827,8 +825,183 @@ Prototypes
 ----------
 
 
+Async / Await
+_____________
+
+Cleaner code with **async** and **await**
 
 
+examinining the following code:
+
+.. code:: javascript
+
+  function a(){}
+  funciton b() {}
+  a()
+  b()
+
+
+b() is executed after a() as expected
+
+
+// The following acync function returns a **promise**.
+
+.. code:: javascript
+
+  async function a() { return 'Hello' }
+
+
+
+// First method of a .then() is a *resolve*, second is the *reject*
+
+.. code:: javascript
+
+a().then(console.log)
+
+  > a().then(console.log)
+  Promise {
+    <pending>,
+    domain:
+     Domain {
+       domain: null,
+       _events:
+        [Object: null prototype] {
+          removeListener: [Function: updateExceptionCapture],
+          newListener: [Function: updateExceptionCapture],
+          error: [Function: debugDomainError] },
+       _eventsCount: 3,
+       _maxListeners: undefined,
+       members: [] } }
+  > hello
+
+
+
+Both of these functions are the same
+
+.. code:: javascript
+
+  > async function a(){return 'one'}
+  undefined
+  > async function b(){return Promise.resolve('two')}
+  undefined
+  >
+  >
+  > a().then(console.log)
+  > one
+  > b().then(console.log)
+  > two
+
+
+
+await
+_____
+
+The *await* keyword is prepended to statements within the *async* function.
+It cannot be used outside of an async function.
+
+.. code:: javascript
+
+  async function a() {
+    await Math.sqrt(); return "one";
+  }
+  async function b(){
+    return "two"
+  }
+
+  a().then(console.log)
+  b().then(console.log)
+
+  a().then(console.log)
+  b().then(console.log)
+
+Outputs `two` followed by `one`
+
+.. code:: javascript
+
+  two
+  one
+
+**await** pauses execution until the statement completes.
+
+.. code:: javascript
+
+  const collect = async function(one, two, three) {
+    try {
+      const first = await source(one)
+      const scound = await source(two)
+      const third = await source(three)
+    } catch (error) {
+      // Error handling
+      console.log(error);
+    }
+  }
+
+  const data = collect()
+
+
+
+Generator
+_________
+
+Generator have a next() method to step through the *yield*ed values. Within a generator function
+you can yield values for the generator. The gnerator also does not have a previous method for returning previous objects
+
+.. code:: javascript
+
+  > let gens = function*() {yield 1; yield 2; yield 3; yield 4; yield 5; yield "hello"}
+  >
+  > g = gens()
+  > g.next()
+  { value: 1, done: false }
+  > g.next()
+  { value: 2, done: false }
+  > g.next()
+  { value: 3, done: false }
+  > g.next()
+  { value: 4, done: false }
+  > g.next()
+  { value: 5, done: false }
+  > g.next()
+  { value: 'hello', done: false }
+  > g.next()
+  { value: undefined, done: true }
+  > g.next()
+  { value: undefined, done: true }
+  >
+
+
+Trowing errors
+
+.. code:: javascript
+
+
+  function* generator() {
+    try {
+      yield 'a'
+      yield 'b'
+      yield 'c'
+      yield 'd'
+    } catch(e) {
+      console.log('This error:', e)
+    }
+  }
+  let gen = generator()
+  > gen.next()
+  { value: 'a', done: false }
+  > gen.next()
+  { value: 'b', done: false }
+  > gen.next()
+  { value: 'c', done: false }
+  > gen.next()
+  { value: 'd', done: false }
+  > gen.next()
+  { value: undefined, done: true }
+  > gen.next()
+
+  > gen.throw(new Error('Error....'))
+  Thrown:
+  Error: Error....
+  >
 
 
 
