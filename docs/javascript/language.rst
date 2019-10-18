@@ -227,8 +227,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
   2
 
 
-
-
 .. code:: javascript
 
   > var x = [1, 2, 3, 4, 5];
@@ -452,7 +450,6 @@ Bitwise Operators
 =================
 
 
-
 **Assumes** :js:`A=10` and :js:`B=20`
 
 
@@ -461,19 +458,17 @@ Bitwise Operators
    :align: left
    :widths: 5, 10, 10
 
-   ===========  ==================================== ==============================
-     Operator    Description                          Example
-   ===========  ==================================== ==============================
-        &        Bitwise AND                         :js:`(A & B)`     //-->
-        \|       Bitwise OR                          :js:`(A | B)`     //-->
-        ^        Bitwise XOR                         :js:`(A ^ B)`     //-->
-        ~        Bitwise Not is the unary operator   :js:`(~A)`        //-->
-       <<        Left shift                          :js:`(A << 1)`        //-->
-       >>        Right shift                         :js:`(A >> 1)`        //-->
-       \>>>      Right shift with Zero               :js:`(A >>> 1)`        //-->
-   ===========  ==================================== ==============================
-
-
+   ===========  ==================================== ============= ==========
+     Operator    Description                          Example        Results
+   ===========  ==================================== ============= ==========
+        &        Bitwise AND                         :js:`A & B`     0
+        \|       Bitwise OR                          :js:`A | B`     30
+        ^        Bitwise XOR                         :js:`A ^ B`     30
+        ~        Bitwise Not is the unary operator   :js:`~A`        -11
+       <<        Left shift                          :js:`A << 1`    20
+       >>        Right shift                         :js:`A >> 1`    5
+       \>>>      Right shift with Zero               :js:`A >>> 1`   5
+   ===========  ==================================== ============= ==========
 
 
 
@@ -603,8 +598,8 @@ Symbol
 
 
 
-Rest & Spread
--------------
+Rest & Spread Arrays
+--------------------
 
 Rest & Spread allows use to pack and unpack N number of values of an array.
 
@@ -637,6 +632,110 @@ Rest & Spread allows use to pack and unpack N number of values of an array.
   }
 
  sum(1, 2, 3, 4, 5, 6)      // [ 3, 4, 5, 6 ]
+
+
+
+
+Rest & Spread Object Literals
+------------------------------
+
+
+
+> obj1 = {foo: 'bar', x: 10}
+{ foo: 'bar', x: 10 }
+>
+> obj2 = {foo:'baz', y: 20)
+Thrown:
+obj2 = {foo:'baz', y: 20)
+                        ^
+
+SyntaxError: Unexpected token )
+> obj2 = {foo:'baz', y: 20}
+{ foo: 'baz', y: 20 }
+>
+> cloneObj = {...obj1}
+{ foo: 'bar', x: 10 }
+>
+> merged = {...obj1, ...obj2}
+{ foo: 'baz', x: 10, y: 20 }
+> obj2 = {foo:'ban', y: 20}
+{ foo: 'ban', y: 20 }
+>
+>
+>
+> merged = {...obj1, ...obj2}
+{ foo: 'ban', x: 10, y: 20 }
+>
+
+
+> let  obj = {
+... obj1: {
+..... obj2: {
+....... one: 1,
+....... two: 2,
+....... three: 3
+....... }
+..... }
+... }
+undefined
+> obj
+
+
+> let { one, two, three } = obj.obj1.obj2
+
+
+
+destructing and reaname at the same time
+
+> let {person: boss} = {person: "Tom Lee"}
+undefined
+> person
+'Tom Lee'
+> boss
+'Tom Lee'
+> boss = 'James'
+'James'
+>
+>
+> person
+'Tom Lee'
+> boss
+'James'
+>
+
+Merge two or more objects.
+
+>
+> one = {a:1, b:2, c:3, d:(=>{} }
+Thrown:
+one = {a:1, b:2, c:3, d:(=>{} }
+                         ^^
+
+SyntaxError: Unexpected token =>
+> one = {a:1, b:2, c:3, d:()=>{} }
+{ a: 1, b: 2, c: 3, d: [Function: d] }
+>
+>
+> two = {e:5, f:6, g:7}
+{ e: 5, f: 6, g: 7 }
+>
+> three = {...one, ...two}
+{ a: 1, b: 2, c: 3, d: [Function: d], e: 5, f: 6, g: 7 }
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
