@@ -14,6 +14,63 @@ Language
 
 
 
+
+Global environment and global object
+
+
+
+### Execution Context
+
+
+
+Javascript runs code inside an execution context
+
+
+
+The base execution context is the global execution context. Global execution context is accessible everywhere in
+a given project.
+
+The global execution object for `NodeJS` is `this`
+.. code:: javascript
+
+  > this
+  Object [global] {... }
+
+
+The global execution object for web browsers is the **window** object
+.. code:: javascript
+
+  > this
+  Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+
+  > window
+  Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+
+
+Variables are added at the global level are added to the global context
+
+
+.. code:: javascript
+
+  > a = 100
+  100
+  > b = 200
+  200
+  > this
+  Object [global] {
+   ...
+    a: 100,
+    b: 200 }
+
+
+
+
+
+
+
+
+
+
 -----
 Setup
 -----
@@ -316,6 +373,18 @@ Arrays
 
 Objects
 -------
+
+Objects are collections of name value pairs
+
+Person: {
+  Name: "James",
+  Addess: {
+    Street: "",
+    City: "",
+    Zip: "",
+  }
+}
+
 
 
 
