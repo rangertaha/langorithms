@@ -1156,8 +1156,11 @@ An example of a function statement that does not return a value.
 
 Functions Expressions
 _____________________
-
 A function expresion returns a value.
+
+During context creation the variable *helloFunc* is created in memory and set as **undefined**.
+During the context execution phase this function expression is a value assigned
+to the variable *helloFunc* and adding **()** to the variable invokes the code.
 
 .. coder:: javascript
 
@@ -1165,12 +1168,43 @@ A function expresion returns a value.
     console.log("Hello!")
   }
 
+  helloFunc()                         // Hello
+
+
+During context creation the variable *helloFunc* is assigned the value **undefined**. Invoking it prior to value
+assignment returns an error.
+
+.. coder:: javascript
+
+  helloFunc()                        // Uncaught TypeError: undefined is not a function
+
+  var helloFunc = function() {
+    console.log("Hello!")
+  }
 
 
 Function Statement
 __________________
 
+During the context creation phase this function statement is added to memory.
 
+During the context execution phase the function statement is ignored and the function invocation executes the code.
+.. coder:: javascript
+
+  function helloFunc() {
+    console.log("Hello!")
+  }
+
+  helloFunc()
+
+Because the function statement is in memory, we can invoke the function object prior to the function statement.
+.. coder:: javascript
+
+  helloFunc()                   // Hello
+
+  function helloFunc() {
+    console.log("Hello!")
+  }
 
 
 
