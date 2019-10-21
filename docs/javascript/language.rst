@@ -391,6 +391,19 @@ Person: {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 -----
 Scope
 -----
@@ -658,6 +671,54 @@ Operator Precedence
      Operator    Description                          Example
    ===========  ==================================== ==============================
    ===========  ==================================== ==============================
+
+
+
+
+Associativity
+-------------
+
+Right and left associativity determine the way operators with the same precedence are parsed. Left associative
+operators are processed from left to right. Right associative operators are processed right to left.
+
+
+Assuming the following statement `a <operator> b <operator> c`. A left associativity operator would process
+like `((a <operator> b) <operator> c)` and a right associativity would be processed like `(a <operator> (b <operator> c)`.
+
+.. code:: javascript
+
+  [a, b, c] = [1, 2, 3]
+
+  a + b - c              //
+  ((a + b) - c)          //
+
+
+  (a + (b * c))          //
+  (a + (b * c))          //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Symbol
