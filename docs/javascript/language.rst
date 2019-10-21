@@ -1140,17 +1140,35 @@ Getting the function name
   'greet'
   >
 
+Function Statement
+__________________
+
+An example of a function statement that does not return a value.
+.. coder:: javascript
+
+  function hello() {
+    console.log("Hello!")
+  }
+
+
+
+
+
 Functions Expressions
 _____________________
 
 A function expresion returns a value.
 
+.. coder:: javascript
+
+  var helloFunc = function() {
+    console.log("Hello!")
+  }
 
 
 
-
-Function ....
-_____________
+Function Statement
+__________________
 
 
 
