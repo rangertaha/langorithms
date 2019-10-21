@@ -14,12 +14,37 @@ Language
 
 
 
+## Context
+
+### Context Creation
+
+Variables are set to **undefinded** prior to value assignment. For example:
+.. code:: javascript
+
+  var a;
+  a             // undefined
+
+
+
+
+
+### Context Execution
+
+
+
+
+
+
+
+
+
+
 
 Global environment and global object
 
 
 
-### Execution Context
+
 
 
 
@@ -1079,6 +1104,39 @@ ____________
 
 Functions
 ---------
+
+Functions are special types of objects. They can have primitives, objects, functions, an optional name and code that
+ is invoked with **()**. However, anonymous functions dont' have a names. Functions attrabutes:
+
+* objects
+* functions
+* primatives
+* optional name
+* code invoked with **()**
+
+
+
+.. coder:: javascript
+  > function greet() { console.log('hi') }
+  undefined
+  >
+  > greet.language = 'english';
+  'english'
+  >
+  >
+  > greet
+  { [Function: greet] language: 'english' }
+  >
+
+
+
+
+
+
+
+
+
+
 
 > function myfunc(a, b, c, d, e="EE") {
 ... console.log(arguments);
