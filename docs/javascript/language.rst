@@ -110,6 +110,8 @@ For mac download and install NodeJs_
 Syntax
 -------
 
+Expressions: code that results in a value and can be used in places where a value is expected
+Statements: Code that does not return a value but performs an action such **if** statements.
 
 
 
@@ -1114,8 +1116,6 @@ Functions are special types of objects. They can have primitives, objects, funct
 * optional name
 * code invoked with **()**
 
-
-
 .. coder:: javascript
   > function greet() { console.log('hi') }
   undefined
@@ -1130,6 +1130,27 @@ Functions are special types of objects. They can have primitives, objects, funct
 
 
 
+Getting the function name
+
+.. coder:: javascript
+
+  > function greet() { console.log('hi') }
+  undefined
+  > greet.name
+  'greet'
+  >
+
+Functions Expressions
+_____________________
+
+A function expresion returns a value.
+
+
+
+
+
+Function ....
+_____________
 
 
 
@@ -1138,35 +1159,38 @@ Functions are special types of objects. They can have primitives, objects, funct
 
 
 
-> function myfunc(a, b, c, d, e="EE") {
-... console.log(arguments);
-... console.log("THIS: " +  this);
-... }
 
-> myfunc(a, b, c, [])
-[Arguments] { '0': 1, '1': 2, '2': 3, '3': [] }
+.. coder:: javascript
+
+  > function myfunc(a, b, c, d, e="EE") {
+  ... console.log(arguments);
+  ... console.log("THIS: " +  this);
+  ... }
+
+  > myfunc(a, b, c, [])
+  [Arguments] { '0': 1, '1': 2, '2': 3, '3': [] }
 
 
 
 
-> function myfunc(a, b, c, d, e="EE") {
-... console.log(this);
-... }
-undefined
-> myfunc()
-Object [global] {
-  global: [Circular],
-  clearInterval: [Function: clearInterval],
-  clearTimeout: [Function: clearTimeout],
-  setInterval: [Function: setInterval],
-  setTimeout: [Function: setTimeout] { [Symbol(util.promisify.custom)]: [Function] },
-  queueMicrotask: [Function: queueMicrotask],
-  clearImmediate: [Function: clearImmediate],
-  setImmediate: [Function: setImmediate] {
-    [Symbol(util.promisify.custom)]: [Function]
-  },
-  myfunc: [Function: myfunc]
-}
+  > function myfunc(a, b, c, d, e="EE") {
+  ... console.log(this);
+  ... }
+  undefined
+  > myfunc()
+  Object [global] {
+    global: [Circular],
+    clearInterval: [Function: clearInterval],
+    clearTimeout: [Function: clearTimeout],
+    setInterval: [Function: setInterval],
+    setTimeout: [Function: setTimeout] { [Symbol(util.promisify.custom)]: [Function] },
+    queueMicrotask: [Function: queueMicrotask],
+    clearImmediate: [Function: clearImmediate],
+    setImmediate: [Function: setImmediate] {
+      [Symbol(util.promisify.custom)]: [Function]
+    },
+    myfunc: [Function: myfunc]
+  }
 
 Anonymous Functions
 -------------------
