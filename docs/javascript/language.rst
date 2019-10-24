@@ -256,10 +256,10 @@ Custom constructor example
 
 
 
-Pass by Reference
------------------
+Pass by Reference or Value
+-----------------------
 
-In JavaScript values are passed by reference
+In JavaScript objects are passed by reference
 
 .. code:: javascript
 
@@ -270,6 +270,26 @@ In JavaScript values are passed by reference
 
   person.name                       //--> 'John Smith'
   john.name                         //--> 'John Smith'
+
+
+Primitive types are pass by value. This includes variables passed as arguments to functoins.
+
+.. code:: javascript
+
+  > a = 3
+  3
+  > b = a
+  3
+  >
+  > a = 9
+  9
+  > b
+  3
+  >
+
+
+
+
 
 
 
@@ -1156,7 +1176,7 @@ An example of a function statement that does not return a value.
 
 Functions Expressions
 _____________________
-A function expresion returns a value.
+A function expression returns a value.
 
 During context creation the variable *helloFunc* is created in memory and set as **undefined**.
 During the context execution phase this function expression is a value assigned
@@ -1181,6 +1201,22 @@ assignment returns an error.
   var helloFunc = function() {
     console.log("Hello!")
   }
+
+
+Functions expressions as arguments
+.. coder:: javascript
+
+  > function print(i) {
+  ... console.log(i())
+  ... }
+  undefined
+  > print(function() { return 'Hi' })
+  Hi
+  undefined
+  >
+
+
+
 
 
 Function Statement
