@@ -18,6 +18,8 @@ Language
 
 ### Context Creation
 
+
+
 Variables are set to **undefinded** prior to value assignment. For example:
 .. code:: javascript
 
@@ -25,10 +27,90 @@ Variables are set to **undefinded** prior to value assignment. For example:
   a             // undefined
 
 
+### Execution Context
+
+When execution context is created it creates the following
+
+* this
+* Variable Environment
+* Outer Environment
 
 
+Within a function statement or a function expresion, 'this' points to the global object.
 
-### Context Execution
+.. code:: javascript
+
+  function aThis() {
+    console.log(this);
+  }
+
+  let bThis = function() {
+    console.log(this);
+  }
+
+  aThis()
+  bThis()
+
+
+When an object is created with a method that logs 'this', the value is the object.
+.. code:: javascript
+
+  let a = {
+    name: '',
+    log: function(){
+      console.log(this)
+    }
+  }
+  > a.log()
+  { name: '', log: [Function: log] }
+
+
+A strange behavior with using 'this'. The following snippet does not work as expected. The method
+**setName()** is setting a value on the global object
+.. code:: javascript
+
+  var a = {
+    person: '',
+    log: function(){
+
+      console.log(this)
+
+      var setName = function(name){
+        this.person = name
+      }
+
+      setName('James Smith');
+
+      console.log(this)
+    }
+  }
+  > a.log()
+  { name: '', log: [Function: log] }
+  { name: '', log: [Function: log] }
+
+
+This fix the issue in the previous snippet. you can do the following
+
+.. code:: javascript
+  var a = {
+    person: '',
+    log: function(){
+      self = this
+
+      console.log(self)
+
+      var setName = function(name){
+        self.person = name
+      }
+
+      setName('James Smith');
+
+      console.log(self)
+    }
+  }
+  > a.log()
+  { person: '', log: [Function: log] }
+  { person: 'James Smith', log: [Function: log] }
 
 
 
@@ -1551,6 +1633,21 @@ Outputs `two` followed by `one`
   }
 
   const data = collect()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
