@@ -495,6 +495,46 @@ You can not used template strings to define object literal property names.
 Arrays
 ------
 
+An array is a collection of items of any type that can be references that starts with 0
+
+.. code:: javascript
+
+  var b = [
+    0,
+    1,
+    2,
+    3,
+    'my string',
+    {a: 'one'},
+    function(n){console.log(n)},
+  ];
+
+  >
+  > b[0]
+  0
+  > b[2]
+  2
+  > b[4]
+  'my string'
+  > b[5]
+  { a: 'one' }
+  > b[5]
+  { a: 'one' }
+  > b[5].a
+  'one'
+  > b[6]()
+  undefined
+  > b[6]('hello')     // Using *()* to call functions within an array.
+  hello
+  undefined
+  >
+
+
+
+
+
+
+
 
 
 Objects
@@ -1242,16 +1282,6 @@ Getting the function name
   'greet'
   >
 
-Function Statement
-__________________
-
-An example of a function statement that does not return a value.
-.. coder:: javascript
-
-  function hello() {
-    console.log("Hello!")
-  }
-
 
 
 
@@ -1304,6 +1334,8 @@ Functions expressions as arguments
 Function Statement
 __________________
 
+An example of a function statement that does not return a value.
+
 During the context creation phase this function statement is added to memory.
 
 During the context execution phase the function statement is ignored and the function invocation executes the code.
@@ -1328,39 +1360,34 @@ Because the function statement is in memory, we can invoke the function object p
 
 
 
-
+Using **arguments** within a function
 
 .. coder:: javascript
 
-  > function myfunc(a, b, c, d, e="EE") {
-  ... console.log(arguments);
-  ... console.log("THIS: " +  this);
-  ... }
-
-  > myfunc(a, b, c, [])
-  [Arguments] { '0': 1, '1': 2, '2': 3, '3': [] }
-
-
-
-
-  > function myfunc(a, b, c, d, e="EE") {
-  ... console.log(this);
-  ... }
-  undefined
-  > myfunc()
-  Object [global] {
-    global: [Circular],
-    clearInterval: [Function: clearInterval],
-    clearTimeout: [Function: clearTimeout],
-    setInterval: [Function: setInterval],
-    setTimeout: [Function: setTimeout] { [Symbol(util.promisify.custom)]: [Function] },
-    queueMicrotask: [Function: queueMicrotask],
-    clearImmediate: [Function: clearImmediate],
-    setImmediate: [Function: setImmediate] {
-      [Symbol(util.promisify.custom)]: [Function]
-    },
-    myfunc: [Function: myfunc]
+  function myfunc(a, b, c, d, e="EE") {
+    console.log(arguments);
+    console.log("THIS: " +  this);
   }
+
+  > myfunc('a', 'b', 'c', [])
+  [Arguments] { '0': 'a', '1': 'b', '2': 'c', '3': [] }
+  THIS: [object global]
+
+
+If you don't add arguments to a function the arguments default to **undefined**
+
+.. coder:: javascript
+
+  function myfunc(a, b, c, d, e="EE") {
+    console.log(arguments);
+    console.log("THIS: " +  this);
+  }
+
+  myfunc()
+                // [Arguments] {}
+                // THIS: [object global]
+
+
 
 Anonymous Functions
 -------------------
