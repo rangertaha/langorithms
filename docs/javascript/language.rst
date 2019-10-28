@@ -1249,7 +1249,7 @@ ____________
 Functions
 ---------
 
-Functions are special types of objects. They can have primitives, objects, functions, an optional name and code that
+Functions are special types of first class objects. They can have primitives, objects, functions, an optional name and code that
  is invoked with **()**. However, anonymous functions dont' have a names. Functions attrabutes:
 
 * objects
@@ -1295,7 +1295,6 @@ During the context execution phase this function expression is a value assigned
 to the variable *helloFunc* and adding **()** to the variable invokes the code.
 
 .. coder:: javascript
-
   var helloFunc = function() {
     console.log("Hello!")
   }
@@ -1326,6 +1325,35 @@ Functions expressions as arguments
   Hi
   undefined
   >
+
+Immediately Invoked Functions Expresion (IIFE)
+++++++++++++++++++++++++++++++++++++++++++++++
+
+Assign function return value to the variable
+.. coder:: javascript
+  var greet = function(s) {
+    console.log(s)
+    return s;
+  }("Hello!")
+
+
+Trick the syntax parser to not treat the function as function statement by wrapping it in () making it a function expresion.
+
+.. coder:: javascript
+  var person = "James"
+  (function(s) {
+    console.log("Hi " + s)
+  }(person));
+
+You can also invoke the function with by putting the () on the outside.
+.. coder:: javascript
+  var person = "James"
+  (function(s) {
+    console.log("Hi " + s)
+  })(person);
+
+
+
 
 
 
