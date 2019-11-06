@@ -1154,6 +1154,85 @@ SyntaxError: Unexpected token =>
 Closures
 --------
 
+Function that returns a function via function expression.
+
+.. code: javascript
+
+  function greet(whattosay) {
+    return function(name) {
+      console.log(whattosay + ' ' + name)
+    }
+  }
+
+Within the **Global Execution Context**, The function statement named `greet()` takes an argument `whattosay` and returns a function expression.
+
+.. code: javascript
+  greet('Hello')    // Hello [Function]
+
+Executing the `greet()` function creates an **Execution Context** with the `whattosay` variable in it's environment.
+After the function expresion is returned, the **greet() Execution Context** is removed from the stack. However, the
+variables in memory are not cleaned up yet.
+
+
+Invoking the returned function creates a new **Execution Context** with references to variables in the outer scope.
+This is refered to as closing in all the variables which is why it's called Closures.
+
+.. code: javascript
+  greet('Hello')()    // Hello Hello undefined
+
+
+Function that returns an array of function objects. After the array is returned the **funcBuilder() Execution Context**
+is removed from the stack with references to variables.
+.. code: javascript
+
+  function funcBuilder() {
+    var arr = [];
+    for (var i = 0; i < 3; i++) {
+      arr.push(function(){console.log(i)})
+    }
+    return arr
+  }
+
+  var fs = funcBuilder();
+
+The value of `i` is same in all three functions because its referencing the last value of `i` in the parent scope.
+.. code: javascript
+
+  fs[0]()    // 3
+  fs[1]()    // 3
+  fs[2]()    // 3
+
+
+
+.. code: javascript
+
+function funcBuilder() {
+  var arr = [];
+  for (var i = 0; i < 3; i++) {
+    arr.push(
+      (function(j){
+        console.log(j)
+        }(i))                      // Execute function to get value
+    )
+  }
+  return arr
+}
+
+var fs = funcBuilder();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1250,11 +1329,13 @@ Functions
 ---------
 
 Functions are special types of first class objects. They can have primitives, objects, functions, an optional name and code that
- is invoked with **()**. However, anonymous functions dont' have a names. Functions attrabutes:
+ is invoked with **()**. However, anonymous functions dont' have a names.
+
+Functions Attributes
 
 * objects
 * functions
-* primatives
+* primitives
 * optional name
 * code invoked with **()**
 
@@ -1270,8 +1351,6 @@ Functions are special types of first class objects. They can have primitives, ob
   { [Function: greet] language: 'english' }
   >
 
-
-
 Getting the function name
 
 .. coder:: javascript
@@ -1281,6 +1360,51 @@ Getting the function name
   > greet.name
   'greet'
   >
+
+Methods
+______
+
+* bind()
+* apply()
+* call()
+
+
+.. code: javascript
+
+  var human = {
+    firstname: 'James',
+    lastname: 'Smith',
+    getFullname() {return this.firstname + ' ' + this.lastname}
+  }
+
+The `this` keyword points to the `human` object because it's accessed within an object menthod.
+.. code: javascript
+
+  > human.getFullname()
+  'James Smith'
+  >
+
+However, `this` the following function expresion points to the global this in the global context.
+.. code: javascript
+
+var humanName = function(){
+  console.log(this.getFullName());
+}
+humanName();   // TypeError: this.getFullName is not a function
+
+
+**Bind**
+
+.. code: javascript
+
+  var print = humanName.bind(human)
+
+  print()
+
+
+
+
+
 
 
 
