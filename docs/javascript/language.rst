@@ -1594,6 +1594,11 @@ Assigning functions to variables
 Arrow Functions
 _______________
 
+
+* Arrow functions bind **this** from the parent scope to the function scope
+
+
+
 The normal way
 .. code:: javascript
   

@@ -10,7 +10,4 @@ Javascript Programming
   ./algorithms
   ./libraries
   ./patterns
-
-
-
-
+  ./typescript/index

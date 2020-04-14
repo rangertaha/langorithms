@@ -9,10 +9,33 @@ Setup
 ------
 Syntax
 ------
+Language specific syntax
+
+-----------
+Conventions
+-----------
+Language conventions the community has adopted
+
+
+Naming Conventions
+==================
+Files
+Classes
+Functions
+Variables
+Comments
+
+
+
+
+
+
 
 ---------
 Variables
 ---------
+
+
 
 ----------
 Data Types
@@ -102,10 +125,23 @@ Modules
 -------
 
 
-
 ---------------
 Object Oriented
 ---------------
+
+
+
+
+-----------
+Code Format
+-----------
+
+
+
+
+
+
+
 
 
 
