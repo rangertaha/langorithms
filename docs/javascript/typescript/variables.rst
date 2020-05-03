@@ -11,6 +11,7 @@ Primitive Types
 Variable Declaration  Variable  Initialization
 
 
+
 .. code:: javascript
 
 let apples: number = 10;

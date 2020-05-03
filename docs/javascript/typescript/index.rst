@@ -29,8 +29,8 @@ Types
         Objects
 
 
-    Type Annotations - Describing the type of value a variable refers to.
-    Type Inference - Infering the type of value a variable refers to.
+Type Annotations - Describing the type of value a variable refers to.
+Type Inference - Infering the type of value a variable refers to.
         if we assign the value during variable declaration such as `let a = 'Alpha'` the inference system automatically infers the type.
 
 
