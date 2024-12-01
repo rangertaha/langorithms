@@ -146,6 +146,6 @@ This breakdown encapsulates the foundational concepts present in most programmin
   c/index
   rs/index
   go/index
-  python/index
+  py/index
   bash/index
 

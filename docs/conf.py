@@ -19,7 +19,7 @@ master_doc = 'index'
 # -- Project information -----------------------------------------------------
 
 project = 'Langorithms'
-copyright = '2019, Rangertaha'
+copyright = '2024 Rangertaha'
 author = 'Rangertaha'
 
 # The full version, including alpha/beta/rc tags
