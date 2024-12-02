@@ -133,6 +133,31 @@ Security Constructs
 - **Encryption Libraries**: Cryptography support.
 - **Sandboxing**: Isolated execution.
 
+
+
+Tooling
+-------
+
+- **Package Management**: Installing, maintaining, and publishing libraries.
+- **Linting**: Checking code for style issues, bugs, and errors
+- **Building**: Compiling or pacakging code for distribution
+- **Testing**: Running unit tests
+- **Running**: Run code during development
+
+
+Patterns
+-------
+
+- **Package Management**: Installing, maintaining, and publishing libraries.
+- **Linting**: Checking code for style issues, bugs, and errors
+- **Building**: Compiling or pacakging code for distribution
+- **Testing**: Running unit tests
+- **Running**: Run code during development
+
+
+
+
+
 This breakdown encapsulates the foundational concepts present in most programming languages.
 
 
